@@ -20,9 +20,10 @@ docker run --rm \
   -e GITHUB_TOKEN="changeme" \
   -e GITEA_URL="changeme" \
   -e GITEA_TOKEN="changeme" \
+  -e GITHUB_ORG="changeme" \
   -e ORG_MAPPING='{"abc-org": "abc-org", "other-org": "other-org"}' \
   --name=gh-mirror \
-  ghcr.io/brighteyed/gh-mirror:latest
+  ghcr.io/jrbeilke/gh-mirror:latest
 ```
 
 #### Notes:
@@ -56,4 +57,5 @@ docker run --rm -e GITHUB_TOKEN="changeme" \
   * `GITHUB_TOKEN` – Github personal access token
   * `GITEA_URL` – Gitea URL
   * `GITEA_TOKEN` – Gitea personal access token
+  * `GITHUB_ORG` - Github organization to fetch repos from (Optional)
   * `ORG_MAPPING` – JSON string mapping Github organizations to Gitea organizations
